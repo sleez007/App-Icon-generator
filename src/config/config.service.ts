@@ -43,6 +43,17 @@ export class ConfigService {
     }
   }
 
+  async removeOpenAIKey(): Promise<void> {
+    try {
+      const config = await this.loadConfig();
+      config.openaiApiKey = undefined;
+      await this.saveConfig(config);
+      console.log(chalk.green(`API key removed successfully!`));
+    } catch (error) {
+      throw new Error(`Failed to remove API key: ${(error as Error)?.message}`);
+    }
+  }
+
   private async loadConfig(): Promise<Config> {
     try {
       if (await fs.pathExists(this.configPath)) {
