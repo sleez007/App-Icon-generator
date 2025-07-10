@@ -12,6 +12,9 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 
+# Icons
+/icons
+
 # OS
 .DS_Store
 
