@@ -1,0 +1,1 @@
+bunx lint-staged --relative && bun format && bun check-deps

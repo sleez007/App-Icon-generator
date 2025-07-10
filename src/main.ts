@@ -8,6 +8,7 @@ async function bootstrap() {
     version: '1.0.0',
   });
 }
+
 bootstrap().catch((error: Error) => {
   console.error(`Fatal error: ${error?.message}`);
   process.exit(1);
