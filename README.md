@@ -26,6 +26,7 @@ npm install -g @innovatespace/nova-icon
 Or run with `npx` (no installation required):
 
 ```bash
+# This is not working at the moment, will be fixed in the next release
 npx nova-icon --help
 ```
 
@@ -36,19 +37,19 @@ npx nova-icon --help
 ### 🖼️ Generate Icons from a Local Image
 
 ```bash
-npx nova-icon generate --filepath="./path/to/image.png" --output="./icons"
+nova-icon generate --filepath="./path/to/image.png" --output="./icons"
 
 # Shorthand
-npx nova-icon gen -f="./path/to/image.png" -o="./icons"
+nova-icon gen -f="./path/to/image.png" -o="./icons"
 ```
 
 ### 🤖 Generate Icons from an AI Prompt
 
 ```bash
-npx nova-icon generate --prompt="minimalist weather app icon" --output="./icons"
+nova-icon generate --prompt="minimalist weather app icon" --output="./icons"
 
 # Shorthand
-npx nova-icon gen -p="minimalist weather app icon" -o="./icons"
+nova-icon gen -p="minimalist weather app icon" -o="./icons"
 ```
 
 ---
@@ -58,31 +59,31 @@ npx nova-icon gen -p="minimalist weather app icon" -o="./icons"
 ### Set API Key
 
 ```bash
-npx nova-icon config --set "sk-your-api-key"
+nova-icon config --set "sk-your-api-key"
 
 # Shorthands
-npx nova-icon cfg -s "sk-your-api-key"
-npx nova-icon c -s "sk-your-api-key"
+nova-icon cfg -s "sk-your-api-key"
+nova-icon c -s "sk-your-api-key"
 ```
 
 ### Get API Key
 
 ```bash
-npx nova-icon config --get
+nova-icon config --get
 
 # Shorthands
-npx nova-icon cfg -g
-npx nova-icon c -g
+nova-icon cfg -g
+nova-icon c -g
 ```
 
 ### Remove API Key
 
 ```bash
-npx nova-icon config --remove
+nova-icon config --remove
 
 # Shorthands
-npx nova-icon cfg -r
-npx nova-icon c -r
+nova-icon cfg -r
+nova-icon c -r
 ```
 
 ---
@@ -122,18 +123,18 @@ Nova Icon CLI generates all essential mobile app icon sizes:
 
 ```bash
 # Generate from image
-npx nova-icon gen -f="./assets/logo.png" -o="./icons"
+nova-icon gen -f="./assets/logo.png" -o="./icons"
 
 # Generate from prompt
-npx nova-icon gen -p="retro game controller icon"
+nova-icon gen -p="retro game controller icon"
 
 # Manage API key
-npx nova-icon c -s "sk-your-key"
-npx nova-icon c -g
-npx nova-icon c -r
+nova-icon c -s "sk-your-key"
+nova-icon c -g
+nova-icon c -r
 
 # View help
-npx nova-icon --help
+nova-icon --help
 ```
 
 ---
@@ -164,6 +165,7 @@ bun start:dev
 
 - [ ] Add Unit Tests
 - [ ] Fix Commander default help output for package
+- [ ] Fix issue with using the package without installation i.e `npx nova-icon --help`
 
 ---
 
