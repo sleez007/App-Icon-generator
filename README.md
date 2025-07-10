@@ -6,12 +6,12 @@
 
 ## ✨ Features
 
-- 🖼️ **Icon from Images** – Use local image files (PNG, JPG, JPEG, WebP, TIFF, GIF)
-- 🤖 **AI-Powered Icons** – Generate icons from text prompts via OpenAI
-- 📱 **App-Ready Output** – Creates all standard mobile app icon sizes
-- 🔐 **Secure API Key Management** – Set, get, or remove OpenAI keys locally
-- 🎨 **Image Processing** – High-quality output using [Sharp](https://sharp.pixelplumbing.com/)
-- 💻 **Cross-Platform** – Works on Windows, macOS, and Linux
+- **Icon from Images** – Use local image files (PNG, JPG, JPEG, WebP, TIFF, GIF)
+- **AI-Powered Icons** – Generate icons from text prompts via OpenAI
+- **App-Ready Output** – Creates all standard mobile app icon sizes
+- **Secure API Key Management** – Set, get, or remove OpenAI keys locally
+- **Image Processing** – High-quality output using [Sharp](https://sharp.pixelplumbing.com/)
+- **Cross-Platform** – Works on Windows, macOS, and Linux
 
 ---
 
@@ -157,6 +157,13 @@ bun build
 # Run in dev mode
 bun start:dev
 ```
+
+---
+
+## 📝 TODO
+
+- [ ] Add Unit Tests
+- [ ] Fix Commander default help output for package
 
 ---
 
