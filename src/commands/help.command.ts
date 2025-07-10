@@ -3,7 +3,8 @@ import { Command, CommandRunner } from 'nest-commander';
 
 @Command({
   name: 'help',
-  description: 'Display help information',
+  description: 'Show detailed help information',
+  aliases: ['h'],
 })
 export class HelpCommand extends CommandRunner {
   async run(): Promise<void> {
