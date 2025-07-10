@@ -10,7 +10,7 @@ interface Config {
 
 @Injectable()
 export class ConfigService {
-  private readonly configPath = path.join(os.homedir(), '.icon-genrc.json');
+  private readonly configPath = path.join(os.homedir(), '.novaiconrc.json');
 
   async getOpenAIKey(): Promise<string | null> {
     try {

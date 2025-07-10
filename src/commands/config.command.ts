@@ -48,9 +48,9 @@ export class ConfigCommand extends CommandRunner {
         chalk.white('Manage your OpenAI API key for AI-generated icons\n'),
       );
       console.log(chalk.yellow('Examples:'));
-      console.log('  icon-gen config --set="sk-your-openai-api-key"');
-      console.log('  icon-gen config --get');
-      console.log('  icon-gen config --remove\n');
+      console.log('  nova-icon config --set="sk-your-openai-api-key"');
+      console.log('  nova-icon config --get');
+      console.log('  nova-icon config --remove\n');
     } catch (error) {
       console.error(chalk.red(`❌ Error: ${(error as Error).message}`));
       process.exit(1);

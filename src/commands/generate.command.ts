@@ -26,10 +26,10 @@ export class GenerateCommand extends CommandRunner {
         );
         console.log(chalk.blue('\nUsage examples:'));
         console.log(
-          '  icon-gen generate --filepath="./my-image.png" --output="./icons"',
+          '  nova-icon generate --filepath="./my-image.png" --output="./icons"',
         );
         console.log(
-          '  icon-gen generate --prompt="modern app icon for a fitness app" --output="./icons"',
+          '  nova-icon generate --prompt="modern app icon for a fitness app" --output="./icons"',
         );
         return;
       }

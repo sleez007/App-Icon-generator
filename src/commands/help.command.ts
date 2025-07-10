@@ -26,22 +26,22 @@ export class HelpCommand extends CommandRunner {
     console.log(chalk.gray('  # Generate from local image'));
     console.log(
       chalk.white(
-        '  icon-gen generate --filepath="./logo.png" --output="./icons"',
+        '  nova-icon generate --filepath="./logo.png" --output="./icons"',
       ),
     );
     console.log(chalk.gray('  \n  # Generate from AI prompt'));
     console.log(
       chalk.white(
-        '  icon-gen generate --prompt="modern app icon for a fitness app"',
+        '  nova-icon generate --prompt="modern app icon for a fitness app"',
       ),
     );
     console.log(chalk.gray('  \n  # Set OpenAI API key'));
     console.log(
-      chalk.white('  icon-gen config --set="sk-your-openai-api-key"'),
+      chalk.white('  nova-icon config --set="sk-your-openai-api-key"'),
     );
     console.log(chalk.gray('  \n  # Quick generate (default command)'));
-    console.log(chalk.white('  icon-gen --filepath="./image.png"'));
-    console.log(chalk.white('  icon-gen --prompt="cute cat app icon"\n'));
+    console.log(chalk.white('  nova-icon --filepath="./image.png"'));
+    console.log(chalk.white('  nova-icon --prompt="cute cat app icon"\n'));
 
     console.log(chalk.yellow.bold('Generated Icon Sizes:'));
     console.log(chalk.white('  1024x1024, 512x512, 192x192, 180x180, 144x144'));

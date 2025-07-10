@@ -14,13 +14,13 @@ A powerful NestJS-based CLI tool for generating mobile app icons from local imag
 ## Installation
 
 ```bash
-npm install -g icon-gen
+npm install -g @innovatespace/nova-icon
 ```
 
 Or use without installation:
 
 ```bash
-npx icon-gen --help
+npx nova-icon --help
 ```
 
 ## Usage
@@ -28,43 +28,43 @@ npx icon-gen --help
 ### Generate icons from a local image
 
 ```bash
-npx icon-gen gen  --watch -- gen  --filepath='./file-path' --output='./storage-location'
+npx nova-icon gen  --watch -- gen  --filepath='./file-path' --output='./storage-location'
 ```
 
 ### Generate icons from an AI prompt
 
 ```bash
-npx icon-gen --prompt="modern minimalist icon for a fitness app" --output="./storage-location"
+npx nova-icon --prompt="modern minimalist icon for a fitness app" --output="./storage-location"
 ```
 
 ### Set OpenAI API key
 
 ```bash
-npx icon-gen config -s "sk-your-openai-api-key"
+npx nova-icon config -s "sk-your-openai-api-key"
 
 or
 
-npx icon-gen config --set "sk-your-openai-api-key"
+npx nova-icon config --set "sk-your-openai-api-key"
 ```
 
 ### Get OpenAI API key
 
 ```bash
-npx icon-gen config --get
+npx nova-icon config --get
 
 or
 
-npx icon-gen config -g
+npx nova-icon config -g
 ```
 
 ### Remove OpenAI API key
 
 ```bash
-npx icon-gen config --remove
+npx nova-icon config --remove
 
 or
 
-npx icon-gen config -r
+npx nova-icon config -r
 ```
 
 ## Generated Icon Sizes
@@ -92,16 +92,16 @@ The tool generates icons in all standard mobile app sizes:
 
 ```bash
 # Generate from local file
-npx icon-gen gen  --filepath='./example/innovate.png' --output='./icons'
+npx nova-icon gen  --filepath='./example/innovate.png' --output='./icons'
 
 # Generate from AI prompt
-npx icon-gen gen --prompt="cute cat app icon with blue background"
+npx nova-icon gen --prompt="cute cat app icon with blue background"
 
 # Set API key
-npx icon-gen config --set "sk-proj-abc123..."
+npx nova-icon config --set "sk-proj-abc123..."
 
 # Show help
-npx icon-gen --help
+npx nova-icon --help
 ```
 
 ## Requirements
