@@ -10,6 +10,7 @@ export class IconUtils {
     inputPath: string,
     outputDir: string,
   ): Promise<void> {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
     await fs.ensureDir(outputDir);
 
     const promises = this.ICON_SIZES.map(async (size) => {
