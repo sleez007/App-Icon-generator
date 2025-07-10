@@ -1,15 +1,16 @@
 {
   "name": "@innovatespace/nova-icon",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "description": "",
   "author": "Kingsley Etoka",
-  "private": true,
+  "private": false,
   "license": "MIT",
   "main": "dist/main.js",
   "bin": {
     "nova-icon": "./dist/main.js"
   },
   "scripts": {
+    "publish": "npm publish --access=public",
     "build": "nest build",
     "postbuild": "cpx \"package.json\" dist/  && cpx \"README.md\" dist/ && cpx \"LICENSE\" dist/",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
@@ -100,6 +101,18 @@
     "app",
     "sharp",
     "openai"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sleez007/App-Icon-generator.git"
+  },
+  "homepage": "https://github.com/sleez007/App-Icon-generator#readme",
+  "contributors": [
+    {
+      "name": "Kingsley Etoka",
+      "email": "kingsley.etoka@gmail.com",
+      "url": "https://github.com/sleez007"
+    }
   ],
   "validate-branch-name": {
     "pattern": "^(main|develop|live){1}$|^(feature|fix|refactor|hotfix|release|conflict)/IC-[0-9]{1,5}.*$",

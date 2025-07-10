@@ -1,131 +1,175 @@
-# Icon Generator CLI
+# 🧩 Nova Icon CLI
 
-A powerful NestJS-based CLI tool for generating mobile app icons from local images or AI prompts using OpenAI's DALL-E.
+**Nova Icon** is a powerful, cross-platform CLI tool built with [NestJS](https://nestjs.com/) that helps developers generate high-quality mobile app icons from either **local images** or **AI-generated prompts** using [OpenAI’s DALL·E 3](https://platform.openai.com/docs/guides/images).
 
-## Features
+---
 
-- 🖼️ Generate icons from local images (PNG, JPG, JPEG, WebP, TIFF, GIF)
-- 🤖 Generate icons from AI prompts using OpenAI's DALL-E 3
-- 📱 Creates all standard mobile app icon sizes
-- 🔐 Secure API key storage in user's computer
-- 🎨 High-quality image processing with Sharp
-- 💻 Cross-platform support (Windows, macOS, Linux)
+## ✨ Features
 
-## Installation
+- 🖼️ **Icon from Images** – Use local image files (PNG, JPG, JPEG, WebP, TIFF, GIF)
+- 🤖 **AI-Powered Icons** – Generate icons from text prompts via OpenAI
+- 📱 **App-Ready Output** – Creates all standard mobile app icon sizes
+- 🔐 **Secure API Key Management** – Set, get, or remove OpenAI keys locally
+- 🎨 **Image Processing** – High-quality output using [Sharp](https://sharp.pixelplumbing.com/)
+- 💻 **Cross-Platform** – Works on Windows, macOS, and Linux
+
+---
+
+## 📦 Installation
+
+Install globally:
 
 ```bash
 npm install -g @innovatespace/nova-icon
 ```
 
-Or use without installation:
+Or run with `npx` (no installation required):
 
 ```bash
 npx nova-icon --help
 ```
 
-## Usage
+---
 
-### Generate icons from a local image
+## 🚀 Usage
 
-```bash
-npx nova-icon gen  --watch -- gen  --filepath='./file-path' --output='./storage-location'
-```
-
-### Generate icons from an AI prompt
+### 🖼️ Generate Icons from a Local Image
 
 ```bash
-npx nova-icon --prompt="modern minimalist icon for a fitness app" --output="./storage-location"
+npx nova-icon generate --filepath="./path/to/image.png" --output="./icons"
+
+# Shorthand
+npx nova-icon gen -f="./path/to/image.png" -o="./icons"
 ```
 
-### Set OpenAI API key
+### 🤖 Generate Icons from an AI Prompt
 
 ```bash
-npx nova-icon config -s "sk-your-openai-api-key"
+npx nova-icon generate --prompt="minimalist weather app icon" --output="./icons"
 
-or
-
-npx nova-icon config --set "sk-your-openai-api-key"
+# Shorthand
+npx nova-icon gen -p="minimalist weather app icon" -o="./icons"
 ```
 
-### Get OpenAI API key
+---
+
+## 🔐 OpenAI API Key Management
+
+### Set API Key
+
+```bash
+npx nova-icon config --set "sk-your-api-key"
+
+# Shorthands
+npx nova-icon cfg -s "sk-your-api-key"
+npx nova-icon c -s "sk-your-api-key"
+```
+
+### Get API Key
 
 ```bash
 npx nova-icon config --get
 
-or
-
-npx nova-icon config -g
+# Shorthands
+npx nova-icon cfg -g
+npx nova-icon c -g
 ```
 
-### Remove OpenAI API key
+### Remove API Key
 
 ```bash
 npx nova-icon config --remove
 
-or
-
-npx nova-icon config -r
+# Shorthands
+npx nova-icon cfg -r
+npx nova-icon c -r
 ```
 
-## Generated Icon Sizes
+---
 
-The tool generates icons in all standard mobile app sizes:
+## 📐 Generated Icon Sizes
 
-- 1024x1024px (App Store)
-- 512x512px
-- 192x192px
-- 180x180px (iOS)
-- 144x144px
-- 128x128px
-- 96x96px
-- 72x72px
-- 48x48px
+Nova Icon CLI generates all essential mobile app icon sizes:
 
-## Options
+| Platform        | Dimensions (px) |
+|-----------------|-----------------|
+| App Store       | 1024 × 1024     |
+| Android / Web   | 512 × 512       |
+| Android         | 192 × 192       |
+| iOS             | 180 × 180       |
+| General Purpose | 144 × 144       |
+|                 | 128 × 128       |
+|                 | 96 × 96         |
+|                 | 72 × 72         |
+|                 | 48 × 48         |
 
-- `--filepath <path>` - Path to local image file
-- `--prompt <text>` - AI prompt to generate image
-- `--output <path>` - Output directory (default: ./icons)
-- `--config <api-key>` - Set OpenAI API key
+---
 
-## Examples
+## ⚙️ CLI Options
+
+| Option              | Description                          |
+|---------------------|--------------------------------------|
+| `--filepath, -f`    | Path to local image file             |
+| `--prompt, -p`      | Prompt text for AI-generated icon    |
+| `--output, -o`      | Output directory (default: `./icons`)|
+| `--set, -s`         | Set your OpenAI API key              |
+| `--get, -g`         | Retrieve your stored API key         |
+| `--remove, -r`      | Remove stored OpenAI API key         |
+
+---
+
+## 💡 Examples
 
 ```bash
-# Generate from local file
-npx nova-icon gen  --filepath='./example/innovate.png' --output='./icons'
+# Generate from image
+npx nova-icon gen -f="./assets/logo.png" -o="./icons"
 
-# Generate from AI prompt
-npx nova-icon gen --prompt="cute cat app icon with blue background"
+# Generate from prompt
+npx nova-icon gen -p="retro game controller icon"
 
-# Set API key
-npx nova-icon config --set "sk-proj-abc123..."
+# Manage API key
+npx nova-icon c -s "sk-your-key"
+npx nova-icon c -g
+npx nova-icon c -r
 
-# Show help
+# View help
 npx nova-icon --help
 ```
 
-## Requirements
+---
 
-- Node.js >= 16.0.0
-- OpenAI API key (for AI-generated icons)
+## 🧱 Requirements
 
-## Development
+- **Node.js** v16 or later
+- **OpenAI API Key** (only for AI prompt generation)
+
+---
+
+## 🛠 Development
 
 ```bash
 # Install dependencies
-bun i
+bun install
 
-# Build
+# Build the project
 bun build
 
-# Run locally
+# Run in dev mode
 bun start:dev
 ```
 
-## License
+---
 
-MIT
+## 🤝 Contributing
 
-## Contributing
+Contributions are welcome! Feel free to:
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+- Open issues
+- Submit pull requests
+- Improve documentation
+
+---
+
+## 📄 License
+
+MIT © [InnovateSpace](https://github.com/innovatespace)

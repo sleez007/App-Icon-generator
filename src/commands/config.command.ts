@@ -11,6 +11,7 @@ interface ConfigOptions {
 @Command({
   name: 'config',
   description: 'Manage OpenAI API key configuration',
+  aliases: ['cfg', 'c'],
 })
 export class ConfigCommand extends CommandRunner {
   constructor(private readonly configService: ConfigService) {
