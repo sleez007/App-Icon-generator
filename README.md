@@ -92,7 +92,7 @@ npx nova-icon c -r
 Nova Icon CLI generates all essential mobile app icon sizes:
 
 | Platform        | Dimensions (px) |
-|-----------------|-----------------|
+| --------------- | --------------- |
 | App Store       | 1024 × 1024     |
 | Android / Web   | 512 × 512       |
 | Android         | 192 × 192       |
@@ -107,14 +107,14 @@ Nova Icon CLI generates all essential mobile app icon sizes:
 
 ## ⚙️ CLI Options
 
-| Option              | Description                          |
-|---------------------|--------------------------------------|
-| `--filepath, -f`    | Path to local image file             |
-| `--prompt, -p`      | Prompt text for AI-generated icon    |
-| `--output, -o`      | Output directory (default: `./icons`)|
-| `--set, -s`         | Set your OpenAI API key              |
-| `--get, -g`         | Retrieve your stored API key         |
-| `--remove, -r`      | Remove stored OpenAI API key         |
+| Option           | Description                           |
+| ---------------- | ------------------------------------- |
+| `--filepath, -f` | Path to local image file              |
+| `--prompt, -p`   | Prompt text for AI-generated icon     |
+| `--output, -o`   | Output directory (default: `./icons`) |
+| `--set, -s`      | Set your OpenAI API key               |
+| `--get, -g`      | Retrieve your stored API key          |
+| `--remove, -r`   | Remove stored OpenAI API key          |
 
 ---
 
@@ -172,4 +172,4 @@ Contributions are welcome! Feel free to:
 
 ## 📄 License
 
-MIT © [InnovateSpace](https://github.com/innovatespace)
+MIT © [InnovateSpace](https://github.com/sleez007/App-Icon-generator/blob/main/LICENSE)
