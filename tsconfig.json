@@ -17,7 +17,7 @@
     "noImplicitAny": false,
     "strictBindCallApply": false,
     "noFallthroughCasesInSwitch": false,
-    "allowJs": true
+    "resolveJsonModule": true
   },
-  "include": ["src/**/*", "scripts/**/*", "commitlint.config.js"]
+  "exclude": ["node_modules", "test", "scripts", "**/*spec.ts", "**/*.spec.ts"]
 }

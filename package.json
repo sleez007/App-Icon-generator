@@ -5,12 +5,13 @@
   "author": "Kingsley Etoka",
   "private": true,
   "license": "MIT",
-  "main": "dist/src/main.js",
+  "main": "dist/main.js",
   "bin": {
-    "icon-gen": "./dist/src/main.js"
+    "icon-gen": "./dist/main.js"
   },
   "scripts": {
     "build": "nest build",
+    "postbuild": "cpx \"package.json\" dist/  && cpx \"README.md\" dist/ && cpx \"LICENSE\" dist/",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
     "start:dev": "nest start --watch",
@@ -34,6 +35,7 @@
     "@types/fs-extra": "^11.0.4",
     "axios": "^1.10.0",
     "chalk": "^5.4.1",
+    "cpx": "^1.5.0",
     "fs-extra": "^11.3.0",
     "nest-commander": "^3.17.0",
     "ora": "^8.2.0",
