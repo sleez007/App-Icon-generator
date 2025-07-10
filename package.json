@@ -5,6 +5,10 @@
   "author": "Kingsley Etoka",
   "private": true,
   "license": "MIT",
+  "main": "dist/src/main.js",
+  "bin": {
+    "icon-gen": "./dist/src/main.js"
+  },
   "scripts": {
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
