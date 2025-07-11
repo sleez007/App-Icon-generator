@@ -26,8 +26,12 @@ npm install -g @innovatespace/nova-icon
 Or run with `npx` (no installation required):
 
 ```bash
-# This is not working at the moment, will be fixed in the next release
-npx nova-icon --help
+npx -y @innovatespace/nova-icon --help
+
+# other package manager
+pnpm  @innovatespace/nova-icon --help
+yarn  @innovatespace/nova-icon --help
+bun  @innovatespace/nova-icon --help
 ```
 
 ---

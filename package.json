@@ -1,6 +1,6 @@
 {
   "name": "@innovatespace/nova-icon",
-  "version": "0.0.1",
+  "version": "0.0.9",
   "description": "",
   "author": "Kingsley Etoka",
   "private": false,
@@ -12,8 +12,11 @@
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
-    "publish:package": "npm publish --access=public",
+    "publish:package": "npm publish",
     "build": "nest build",
     "postbuild": "chmod +x dist/main.js",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
